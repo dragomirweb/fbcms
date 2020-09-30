@@ -1188,7 +1188,8 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "Balance"
         ],
         "properties": {
           "id": {
@@ -1248,6 +1249,75 @@
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "Balance": {
+            "type": "object",
+            "required": [
+              "id",
+              "Loan",
+              "Paid",
+              "Interest",
+              "CoinValue"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Loan": {
+                "type": "number",
+                "default": 0
+              },
+              "Paid": {
+                "type": "number",
+                "default": 0
+              },
+              "Coins": {
+                "type": "number",
+                "default": 0
+              },
+              "CashedCoins": {
+                "type": "number",
+                "default": 0
+              },
+              "Interest": {
+                "type": "number",
+                "default": 0
+              },
+              "CoinValue": {
+                "type": "number",
+                "default": 0
+              }
+            }
+          },
+          "CashTransactions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "created",
+                "Amount"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "in",
+                    "out"
+                  ]
+                },
+                "created": {
+                  "type": "datetime"
+                },
+                "Amount": {
+                  "type": "number",
+                  "default": 0
+                }
               }
             }
           },
@@ -1344,7 +1414,8 @@
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "Balance"
         ],
         "properties": {
           "username": {
@@ -1375,6 +1446,75 @@
           },
           "role": {
             "type": "string"
+          },
+          "Balance": {
+            "type": "object",
+            "required": [
+              "id",
+              "Loan",
+              "Paid",
+              "Interest",
+              "CoinValue"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Loan": {
+                "type": "number",
+                "default": 0
+              },
+              "Paid": {
+                "type": "number",
+                "default": 0
+              },
+              "Coins": {
+                "type": "number",
+                "default": 0
+              },
+              "CashedCoins": {
+                "type": "number",
+                "default": 0
+              },
+              "Interest": {
+                "type": "number",
+                "default": 0
+              },
+              "CoinValue": {
+                "type": "number",
+                "default": 0
+              }
+            }
+          },
+          "CashTransactions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "created",
+                "Amount"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "in",
+                    "out"
+                  ]
+                },
+                "created": {
+                  "type": "datetime"
+                },
+                "Amount": {
+                  "type": "number",
+                  "default": 0
+                }
+              }
+            }
           },
           "created_by": {
             "type": "string"

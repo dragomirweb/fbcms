@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_transactions_cash_transactions",
+  "info": {
+    "name": "CashTransactions",
+    "icon": "coins"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "in",
+        "out"
+      ],
+      "enumName": "transactionType"
+    },
+    "created": {
+      "type": "datetime",
+      "required": true
+    },
+    "Amount": {
+      "type": "decimal",
+      "default": 0,
+      "required": true,
+      "min": 1
+    }
+  }
+}

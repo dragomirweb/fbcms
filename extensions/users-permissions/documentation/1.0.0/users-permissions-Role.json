@@ -528,7 +528,8 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "Balance"
               ],
               "properties": {
                 "id": {
@@ -557,6 +558,12 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "Balance": {
+                  "type": "component"
+                },
+                "CashTransactions": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_balance_balances",
+  "info": {
+    "name": "Balance",
+    "icon": "piggy-bank"
+  },
+  "options": {},
+  "attributes": {
+    "Loan": {
+      "type": "decimal",
+      "default": 0,
+      "required": true,
+      "min": 1
+    },
+    "Paid": {
+      "type": "decimal",
+      "default": 0,
+      "required": true,
+      "min": 1
+    },
+    "Coins": {
+      "type": "decimal",
+      "default": 0
+    },
+    "CashedCoins": {
+      "type": "decimal",
+      "default": 0
+    },
+    "Interest": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "CoinValue": {
+      "type": "decimal",
+      "default": 0,
+      "required": true,
+      "min": 1
+    }
+  }
+}

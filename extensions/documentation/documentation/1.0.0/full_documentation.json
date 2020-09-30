@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/28/2020 10:29:23 PM"
+    "x-generation-date": "09/30/2020 9:40:57 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2226,7 +2226,8 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "Balance"
               ],
               "properties": {
                 "id": {
@@ -2255,6 +2256,12 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "Balance": {
+                  "type": "component"
+                },
+                "CashTransactions": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"
@@ -2394,7 +2401,8 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "Balance"
         ],
         "properties": {
           "id": {
@@ -2454,6 +2462,75 @@
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "Balance": {
+            "type": "object",
+            "required": [
+              "id",
+              "Loan",
+              "Paid",
+              "Interest",
+              "CoinValue"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Loan": {
+                "type": "number",
+                "default": 0
+              },
+              "Paid": {
+                "type": "number",
+                "default": 0
+              },
+              "Coins": {
+                "type": "number",
+                "default": 0
+              },
+              "CashedCoins": {
+                "type": "number",
+                "default": 0
+              },
+              "Interest": {
+                "type": "number",
+                "default": 0
+              },
+              "CoinValue": {
+                "type": "number",
+                "default": 0
+              }
+            }
+          },
+          "CashTransactions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "created",
+                "Amount"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "in",
+                    "out"
+                  ]
+                },
+                "created": {
+                  "type": "datetime"
+                },
+                "Amount": {
+                  "type": "number",
+                  "default": 0
+                }
               }
             }
           },
@@ -2550,7 +2627,8 @@
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "Balance"
         ],
         "properties": {
           "username": {
@@ -2581,6 +2659,75 @@
           },
           "role": {
             "type": "string"
+          },
+          "Balance": {
+            "type": "object",
+            "required": [
+              "id",
+              "Loan",
+              "Paid",
+              "Interest",
+              "CoinValue"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Loan": {
+                "type": "number",
+                "default": 0
+              },
+              "Paid": {
+                "type": "number",
+                "default": 0
+              },
+              "Coins": {
+                "type": "number",
+                "default": 0
+              },
+              "CashedCoins": {
+                "type": "number",
+                "default": 0
+              },
+              "Interest": {
+                "type": "number",
+                "default": 0
+              },
+              "CoinValue": {
+                "type": "number",
+                "default": 0
+              }
+            }
+          },
+          "CashTransactions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "created",
+                "Amount"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "in",
+                    "out"
+                  ]
+                },
+                "created": {
+                  "type": "datetime"
+                },
+                "Amount": {
+                  "type": "number",
+                  "default": 0
+                }
+              }
+            }
           },
           "created_by": {
             "type": "string"
