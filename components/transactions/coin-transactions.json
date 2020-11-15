@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_transactions_coin_transactions",
+  "info": {
+    "name": "CoinTransactions",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "in",
+        "out"
+      ],
+      "default": "in",
+      "enumName": "transactionType"
+    },
+    "Amount": {
+      "type": "decimal"
+    },
+    "created": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}

@@ -12,11 +12,8 @@
         "in",
         "out"
       ],
-      "enumName": "transactionType"
-    },
-    "created": {
-      "type": "datetime",
-      "required": true
+      "enumName": "transactionType",
+      "default": "in"
     },
     "Amount": {
       "type": "decimal",

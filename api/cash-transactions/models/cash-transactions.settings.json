@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cash_transactions",
+  "info": {
+    "name": "Cash Transactions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "via": "cash_transactions",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "client": {
+      "type": "string",
+      "required": true
+    },
+    "clientEmail": {
+      "type": "email",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "in",
+        "out"
+      ],
+      "default": "in",
+      "required": false
+    },
+    "value": {
+      "type": "decimal"
+    }
+  }
+}

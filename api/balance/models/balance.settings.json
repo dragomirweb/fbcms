@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Balance",
+  "info": {
+    "name": "Credit"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "loan": {
+      "type": "decimal",
+      "default": 0
+    },
+    "paid": {
+      "type": "decimal",
+      "default": 0
+    },
+    "coins": {
+      "type": "decimal",
+      "default": 0
+    },
+    "cashedCoins": {
+      "type": "decimal",
+      "default": 0
+    },
+    "interest": {
+      "type": "decimal",
+      "default": 0
+    },
+    "coinValue": {
+      "type": "decimal",
+      "default": 1
+    },
+    "client": {
+      "type": "email"
+    }
+  }
+}

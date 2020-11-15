@@ -1189,7 +1189,8 @@
           "id",
           "username",
           "email",
-          "Balance"
+          "firstName",
+          "lastName"
         ],
         "properties": {
           "id": {
@@ -1252,74 +1253,120 @@
               }
             }
           },
-          "Balance": {
-            "type": "object",
-            "required": [
-              "id",
-              "Loan",
-              "Paid",
-              "Interest",
-              "CoinValue"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Loan": {
-                "type": "number",
-                "default": 0
-              },
-              "Paid": {
-                "type": "number",
-                "default": 0
-              },
-              "Coins": {
-                "type": "number",
-                "default": 0
-              },
-              "CashedCoins": {
-                "type": "number",
-                "default": 0
-              },
-              "Interest": {
-                "type": "number",
-                "default": 0
-              },
-              "CoinValue": {
-                "type": "number",
-                "default": 0
-              }
-            }
-          },
-          "CashTransactions": {
+          "cash_transactions": {
             "type": "array",
             "items": {
-              "type": "object",
               "required": [
                 "id",
-                "created",
-                "Amount"
+                "client",
+                "clientEmail"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
+                "user": {
+                  "type": "string"
+                },
+                "client": {
+                  "type": "string"
+                },
+                "clientEmail": {
+                  "type": "string"
+                },
                 "type": {
-                  "type": "string",
-                  "enum": [
-                    "in",
-                    "out"
-                  ]
+                  "type": "string"
                 },
-                "created": {
-                  "type": "datetime"
+                "value": {
+                  "type": "number"
                 },
-                "Amount": {
-                  "type": "number",
-                  "default": 0
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "coin_transactions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "client",
+                "clientEmail"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "client": {
+                  "type": "string"
+                },
+                "clientEmail": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "number"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "balance": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "loan": {
+                "type": "number"
+              },
+              "paid": {
+                "type": "number"
+              },
+              "coins": {
+                "type": "number"
+              },
+              "cashedCoins": {
+                "type": "number"
+              },
+              "interest": {
+                "type": "number"
+              },
+              "coinValue": {
+                "type": "number"
+              },
+              "client": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
           },
           "created_by": {
             "required": [
@@ -1415,7 +1462,8 @@
         "required": [
           "username",
           "email",
-          "Balance"
+          "firstName",
+          "lastName"
         ],
         "properties": {
           "username": {
@@ -1447,74 +1495,26 @@
           "role": {
             "type": "string"
           },
-          "Balance": {
-            "type": "object",
-            "required": [
-              "id",
-              "Loan",
-              "Paid",
-              "Interest",
-              "CoinValue"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Loan": {
-                "type": "number",
-                "default": 0
-              },
-              "Paid": {
-                "type": "number",
-                "default": 0
-              },
-              "Coins": {
-                "type": "number",
-                "default": 0
-              },
-              "CashedCoins": {
-                "type": "number",
-                "default": 0
-              },
-              "Interest": {
-                "type": "number",
-                "default": 0
-              },
-              "CoinValue": {
-                "type": "number",
-                "default": 0
-              }
-            }
-          },
-          "CashTransactions": {
+          "cash_transactions": {
             "type": "array",
             "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "created",
-                "Amount"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "in",
-                    "out"
-                  ]
-                },
-                "created": {
-                  "type": "datetime"
-                },
-                "Amount": {
-                  "type": "number",
-                  "default": 0
-                }
-              }
+              "type": "string"
             }
+          },
+          "coin_transactions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "balance": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

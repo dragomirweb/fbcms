@@ -53,16 +53,24 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "Balance": {
-      "type": "component",
-      "repeatable": false,
-      "component": "balance.balance",
+    "cash_transactions": {
+      "collection": "cash-transactions",
+      "via": "user"
+    },
+    "coin_transactions": {
+      "collection": "coin-transactions",
+      "via": "user"
+    },
+    "balance": {
+      "model": "balance"
+    },
+    "firstName": {
+      "type": "string",
       "required": true
     },
-    "CashTransactions": {
-      "type": "component",
-      "repeatable": true,
-      "component": "transactions.cash-transactions"
+    "lastName": {
+      "type": "string",
+      "required": true
     }
   }
 }

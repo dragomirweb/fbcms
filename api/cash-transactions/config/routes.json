@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cash-transactions",
+      "handler": "cash-transactions.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cash-transactions/count",
+      "handler": "cash-transactions.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cash-transactions/:id",
+      "handler": "cash-transactions.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cash-transactions",
+      "handler": "cash-transactions.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cash-transactions/:id",
+      "handler": "cash-transactions.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cash-transactions/:id",
+      "handler": "cash-transactions.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

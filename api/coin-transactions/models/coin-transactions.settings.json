@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coin_transactions",
+  "info": {
+    "name": "Coin Transactions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "via": "coin_transactions",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "client": {
+      "type": "string",
+      "required": true
+    },
+    "clientEmail": {
+      "type": "email",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "in",
+        "out"
+      ],
+      "default": "in"
+    },
+    "value": {
+      "type": "decimal"
+    }
+  }
+}
